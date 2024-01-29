@@ -1,0 +1,41 @@
+
+<body>
+<h1><p class="countdown">Voting</p></h1>
+<div class="inner-content">
+<script charset="utf-8" type="text/javascript" src="https://static.polldaddy.com/p/13264124.js"></script>
+</div>
+</body>
+
+<script>
+
+
+
+function pausecomp(millis)
+{
+    var date = new Date();
+    var curDate = null;
+    do { curDate = new Date(); }
+    while(curDate-date < millis);
+}
+
+
+function vote(){
+radio = document.getElementById('PDI_answer59417926');
+vote_btn = document.getElementById('pd-vote-button13264124');
+radio.click()
+vote_btn.click()
+
+setTimeout(function() {
+back_btn = document.querySelector('a.pds-return-poll');
+back_btn.click()
+setTimeout(function() {
+vote()
+}, 1*1000);
+
+}, (3 * 1000));
+
+
+
+}
+vote()
+</script>
